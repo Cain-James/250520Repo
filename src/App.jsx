@@ -41,8 +41,27 @@ export default function App() {
                     >
                         {/* 正面 */}
                         <div
-                            className="absolute w-full h-full bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-2xl"
+                            className="absolute w-full h-full bg-white/90 backdrop-blur-sm rounded-2xl p-12 shadow-2xl"
                             style={{ backfaceVisibility: 'hidden' }}
+                        >
+                            <div className="flex flex-col items-center justify-center h-full">
+                                <div className="text-8xl mb-8 animate-float">❤</div>
+                                <p className="text-3xl font-serif text-pinkDark animate-fade-in">
+                                    2025520
+                                </p>
+                                <p className="text-2xl font-serif text-pinkDark mt-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+                                    三生有幸 同行七载
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* 背面 */}
+                        <div
+                            className="absolute w-full h-full bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-2xl"
+                            style={{
+                                backfaceVisibility: 'hidden',
+                                transform: 'rotateY(180deg)'
+                            }}
                         >
                             <div className="space-y-4">
                                 {message.split('\n\n').map((paragraph, index) => (
@@ -64,25 +83,6 @@ export default function App() {
                                         ))}
                                     </div>
                                 ))}
-                            </div>
-                        </div>
-
-                        {/* 背面 */}
-                        <div
-                            className="absolute w-full h-full bg-white/90 backdrop-blur-sm rounded-2xl p-12 shadow-2xl"
-                            style={{
-                                backfaceVisibility: 'hidden',
-                                transform: 'rotateY(180deg)'
-                            }}
-                        >
-                            <div className="flex flex-col items-center justify-center h-full">
-                                <div className="text-8xl mb-8 animate-float">❤</div>
-                                <p className="text-3xl font-serif text-pinkDark animate-fade-in">
-                                    2025520
-                                </p>
-                                <p className="text-2xl font-serif text-pinkDark mt-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-                                    三生有幸 同行七载
-                                </p>
                             </div>
                         </div>
                     </div>
